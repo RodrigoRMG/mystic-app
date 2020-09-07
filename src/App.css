@@ -3,36 +3,93 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.wsp-logo {
+  padding-top: 2px;
+  height: 7vmin;
+  pointer-events: none;
   align-items: center;
   justify-content: center;
+}
+
+
+.App-header {
+  background-color: #000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.turno-actual {
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.table-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
+
+table { border-collapse: separate; 
+  padding:  0 10px 0 10px;}
+
+tr td:first-child { 
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; 
+}
+tr td:last-child { 
+  border-top-right-radius: 20px; 
+  border-bottom-right-radius: 20px; 
+}
+table tr:nth-child(odd){
+  background-color:#c9c9c9; 
+}
+table tr:nth-child(even){
+  background-color:#e3e3e3; 
+  
+}
+
+.header-tow { 
+  background-color:#333333!important; 
+  Color:white; 
+} 
+th, td { 
+  width:150px; 
+  text-align:center; 
+  padding:5px ;
+  height: 50px;
+} 
+.geeks { 
+  border-right:hidden; 
+} 
+.gfg { 
+  border-collapse:separate; 
+  border-spacing:0 15px; 
+} 
+
+.disponible {
+  background-color: #ffc000;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px; 
+  min-height: 50px;
+  margin: 0 10px 0 10px;
+}
+
+.whatsapp{
+  background-color: #000;
+  color: #FFF;
+  border-radius: 20px; 
+  margin: 0 10px 0 10px;
+  min-height: 50px;
+}
+
