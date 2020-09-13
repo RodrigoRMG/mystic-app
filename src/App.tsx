@@ -2,16 +2,23 @@ import React, {useState, useEffect} from 'react';
 import logo from './image/logo.png';
 import './App.css';
 
+interface Turno {
+  id?: number;
+  name: string;
+  number: number;
+  project: string;
+}
+
 const getCitas=async(cb:any)=> {
 
-  fetch('http://localhost:3000/api/turnos')
+  fetch('http://157.245.117.205:3000/api/turnos')
   .then(res=>res.json())
   .then(res=>{
     cb(res)
   });
 }
 function App() {
-  const [citas, setCitas] = useState([]);
+  const [citas, setCitas] = useState<Turno[]>([]);
 
   useEffect(()=>{
     getCitas(setCitas);
@@ -24,7 +31,10 @@ function App() {
         Gestión de turnos
       </header>
       <div>
-        <h1 className="turno-actual">TURNO ACTUAL 005</h1>
+        {
+          citas[0] && <h1 className="turno-actual">TURNO ACTUAL {citas[0]?.number}</h1>
+        }
+  
 
         <div className="table-container">
           <table className = "gfg"> 
@@ -35,7 +45,7 @@ function App() {
                 <td>Proyecto</td>
               </tr>
               {
-                citas.map((cita:any)=>(
+                citas.map((cita:Turno)=>(
                   <tr key={cita.id}> 
                     <td className = "geeks">{cita.number}</td> 
                     <td>{cita.name}</td> 
@@ -48,10 +58,11 @@ function App() {
         </div>
       </div>
       <div className="disponible">
-        <p style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno 5 dispobible</p>
+        {
+        citas.length>0 && citas[citas.length-1] ? <p style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno {citas[citas.length-1].number+1} dispobible</p> :  <p style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno 1 dispobible</p>}
       </div>
       <div className="whatsapp">
-        <a style={{textDecoration: "none", color: "#FFF"}} href="https://wa.me/523321214680"><p style={{paddingTop: 5, fontSize: "1.5rem"}}>Reservar por whatsapp </p></a>
+        <a style={{textDecoration: "none", color: "#FFF"}} href="https://wa.me/50769605310"><p style={{paddingTop: 5, fontSize: "1.5rem"}}>Reservar por whatsapp </p></a>
       </div>
     </div>
   );
