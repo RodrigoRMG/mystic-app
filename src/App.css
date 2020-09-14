@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
 }
 
 .App-logo {
@@ -42,12 +44,12 @@ table { border-collapse: separate;
   padding:  0 10px 0 10px;}
 
 tr td:first-child { 
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px; 
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px; 
 }
 tr td:last-child { 
-  border-top-right-radius: 20px; 
-  border-bottom-right-radius: 20px; 
+  border-top-right-radius: 80px; 
+  border-bottom-right-radius: 80px; 
 }
 table tr:nth-child(odd){
   background-color:#c9c9c9; 
@@ -80,16 +82,16 @@ th, td {
   text-align: center;
   align-items: center;
   justify-content: center;
-  border-radius: 20px; 
-  min-height: 50px;
+  border-radius: 30px; 
+  min-height: 40px;
   margin: 0 10px 0 10px;
 }
 
 .whatsapp{
   background-color: #000;
   color: #FFF;
-  border-radius: 20px; 
+  border-radius: 30px; 
   margin: 0 10px 0 10px;
-  min-height: 50px;
+  min-height: 40px;
 }
 

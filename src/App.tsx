@@ -27,8 +27,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <div>
         <img src={logo} className="App-logo" alt="logo" />
+        </div>
+        <div style={{width: '100%', textAlign: "end", paddingRight: 10}}>
         Gestión de turnos
+        </div>
+       
+        
       </header>
       <div>
         {
@@ -49,7 +55,7 @@ function App() {
                   <tr key={cita.id}> 
                     <td className = "geeks">{cita.number}</td> 
                     <td>{cita.name}</td> 
-                    <td>{cita.project}</td> 
+                    <td style={{paddingRight:15}}>{cita.project}</td> 
                 </tr> 
                 ))
               }
@@ -59,10 +65,10 @@ function App() {
       </div>
       <div className="disponible">
         {
-        citas.length>0 && citas[citas.length-1] ? <p style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno {citas[citas.length-1].number+1} dispobible</p> :  <p style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno 1 dispobible</p>}
+        citas.length>0 && citas[citas.length-1] ? <p style={{paddingTop: 5, fontSize: "1.2rem"}}>Turno {citas[citas.length-1].number+1} disponible</p> :  <p style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno 1 dispobible</p>}
       </div>
       <div className="whatsapp">
-        <a style={{textDecoration: "none", color: "#FFF"}} href="https://wa.me/50769605310"><p style={{paddingTop: 5, fontSize: "1.5rem"}}>Reservar por whatsapp </p></a>
+        <a style={{textDecoration: "none", color: "#FFF"}} href="https://wa.me/50769605310"><p style={{paddingTop: 5, fontSize: "1.2rem"}}>Reservar por whatsapp <i style={{color: '#FFF', marginLeft:5}} className="fab fa-whatsapp"></i> </p></a>
       </div>
     </div>
   );
