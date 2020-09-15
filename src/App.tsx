@@ -11,7 +11,7 @@ interface Turno {
 
 const getCitas=async(cb:any)=> {
 
-  fetch('http://157.245.117.205:3000/api/turnos')
+  fetch('https://mytic-api.herokuapp.com/api/turnos')
   .then(res=>res.json())
   .then(res=>{
     cb(res)
