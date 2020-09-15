@@ -78,20 +78,28 @@ th, td {
 } 
 
 .disponible {
+  margin-top: 20px;
   background-color: #ffc000;
   text-align: center;
   align-items: center;
   justify-content: center;
   border-radius: 30px; 
-  min-height: 40px;
+  height: 50px;
   margin: 0 10px 0 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .whatsapp{
+  margin-top: 20px;
   background-color: #000;
   color: #FFF;
   border-radius: 30px; 
   margin: 0 10px 0 10px;
-  min-height: 40px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
