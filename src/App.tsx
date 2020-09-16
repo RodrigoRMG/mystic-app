@@ -51,7 +51,7 @@ function App() {
                 <td>Proyecto</td>
               </tr>
               {
-                citas.map((cita:Turno)=>(
+                citas.slice(0, 10).map((cita:Turno)=>(
                   <tr key={cita.id}> 
                     <td className = "geeks">{cita.number}</td> 
                     <td>{cita.name}</td> 
