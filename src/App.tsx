@@ -53,7 +53,7 @@ function App() {
               {
                 citas.slice(0, 10).map((cita:Turno)=>(
                   <tr key={cita.id}> 
-                    <td className = "geeks">{cita.number}</td> 
+                    <td className = "geeks">{cita.id}</td> 
                     <td>{cita.name}</td> 
                     <td style={{paddingRight:15}}>{cita.project}</td> 
                 </tr> 
