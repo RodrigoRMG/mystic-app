@@ -69,7 +69,7 @@ function App() {
           citas.length>0 && citas[citas.length-1] ? <span style={{paddingTop: 5, fontSize: "1.2rem"}}>Turno {citas[citas.length-1].id+1} disponible</span> :  <span style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno 1 dispobible</span>}
         </div>
       </div>
-      <div style={{marginTop: 20}}>
+      <div style={{marginTop: 20, marginBottom: 80}}>
         <div className="whatsapp">
           <a style={{textDecoration: "none", color: "#FFF"}} href="https://wa.me/50769605310"><span style={{paddingTop: 5, fontSize: "1.2rem"}}>Reservar por whatsapp <i style={{color: '#FFF', marginLeft:5}} className="fab fa-whatsapp"></i> </span></a>
         </div>
