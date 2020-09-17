@@ -3,7 +3,7 @@ import logo from './image/logo.png';
 import './App.css';
 
 interface Turno {
-  id?: number;
+  id: number;
   name: string;
   number: number;
   project: string;
@@ -66,7 +66,7 @@ function App() {
       <div style={{marginTop: 20}}>
         <div className="disponible">
           {
-          citas.length>0 && citas[citas.length-1] ? <span style={{paddingTop: 5, fontSize: "1.2rem"}}>Turno {citas[citas.length-1].number+1} disponible</span> :  <span style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno 1 dispobible</span>}
+          citas.length>0 && citas[citas.length-1] ? <span style={{paddingTop: 5, fontSize: "1.2rem"}}>Turno {citas[citas.length-1].id+1} disponible</span> :  <span style={{paddingTop: 5, fontSize: "1.5rem"}}>Turno 1 dispobible</span>}
         </div>
       </div>
       <div style={{marginTop: 20}}>
