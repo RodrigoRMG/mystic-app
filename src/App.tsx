@@ -38,7 +38,7 @@ function App() {
       </header>
       <div>
         {
-          citas[0] && <h1 className="turno-actual">TURNO ACTUAL {citas[0]?.number}</h1>
+          citas[0] && <h1 className="turno-actual">TURNO ACTUAL {citas[0]?.id}</h1>
         }
   
 
