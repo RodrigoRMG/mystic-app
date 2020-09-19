@@ -9,23 +9,31 @@ interface Turno {
   project: string;
 }
 
-const getCitas=async(cb:any)=> {
+const getCitas=async(cb:any, loading:any)=> {
 
   fetch('https://mystic-api.herokuapp.com/api/turnos')
   .then(res=>res.json())
   .then(res=>{
     cb(res)
+    loading(false)
+  })
+  .catch(error=>{
+    alert('Ha ocurrido un error: ' + error)
+    loading(false)
   });
 }
 function App() {
   const [citas, setCitas] = useState<Turno[]>([]);
+  const [loading, setLoading] = useState<boolean>(true)
 
   useEffect(()=>{
-    getCitas(setCitas);
+    getCitas(setCitas, setLoading);
   }, [])
 
   return (
-    <div className="App">
+    <>
+    { loading &&  <div className="loading">Loading&#8230;</div>}
+    <div className="App content">
       <header className="App-header">
         <div>
         <img src={logo} className="App-logo" alt="logo" />
@@ -75,6 +83,7 @@ function App() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
